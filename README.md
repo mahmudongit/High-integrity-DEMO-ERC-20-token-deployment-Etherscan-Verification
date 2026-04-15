@@ -56,5 +56,5 @@ This is **High-Integrity ERC-20** — the standard I deliver when the stakes are
 
 Ready for mainnet. Ready for production. Ready for your users.
 
-— Mahmud | X: @vanebuilds_ | Fiverr: https://www.fiverr.com/s/1qyxGI5
+— Mahmud | X: @vanebuilds_
 *Ethereum Security Specialist | Brownie Framework Expert*
