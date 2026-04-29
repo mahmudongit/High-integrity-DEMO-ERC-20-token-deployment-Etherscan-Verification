@@ -1,7 +1,5 @@
 # My First ERC-20 token. [Verified on Etherscan]
 
-**Engineered for maximum security, zero exploits, and institutional-grade trust.**
-
 ---
 
 ## Status
