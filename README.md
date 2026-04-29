@@ -1,4 +1,4 @@
-# High-Integrity ERC-20 — Verified Ethereum Smart Contract
+# My First ERC-20 token. [Verified on Etherscan]
 
 **Engineered for maximum security, zero exploits, and institutional-grade trust.**
 
