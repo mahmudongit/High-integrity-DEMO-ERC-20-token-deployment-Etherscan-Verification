@@ -24,11 +24,11 @@ I used the compiler to `0.8.20` in the Brownie `brownie-config.yaml` and `contra
 ---
 
 ### 2. Integer Safety  
-**Solidity 0.8+ Built-in Overflow/Underflow Protection + Manual Math Verification**  
+**Solidity 0.8+ Built-in Overflow/Underflow Protection + Manual Verification**  
 
-All edge cases were tested in Brownie (including max `uint256`, zero-value transfers, and supply boundary conditions). No unsafe math paths exist.  
+All edge cases were tested in Brownie.
 
-**Result:** Mathematically airtight.
+**Result:** SOLID.
 
 ---
 
@@ -40,8 +40,6 @@ All edge cases were tested in Brownie (including max `uint256`, zero-value trans
 - `setTaxRate`, `updateRouter`, `excludeFromFees`, or any other privileged setters (if present in the extended spec)  
 
 All are guarded by OpenZeppelin’s `onlyOwner` modifier (inherited from `Ownable`). The owner address is immutable post-deployment except through a 2-step ownership transfer (renounceable). No `tx.origin`, no uninitialized owners.  
-
-The contract follows the principle of **least privilege** — if a function can move tokens or change state, it is locked down tighter than a vault.
 
 ---
 
