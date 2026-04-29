@@ -15,24 +15,15 @@ I wrote every line with the mindset: “If it can be broken, it will be broke. L
 ---
 
 ### 1. Compiler Version  
-**Locked at Solidity 0.8.20**  
+**Locked at Solidity 0.8.24**  
 
-I used the compiler to `0.8.20` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
+I used the compiler to `0.8.24` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
 
 **The Reason =** One compiler bug can turn a secure contract into a rug. (I don’t gamble)
 
 ---
 
-### 2. Integer Safety  
-**Solidity 0.8+ Built-in Overflow/Underflow Protection + Manual Verification**  
-
-All edge cases were tested in Brownie.
-
-**Result:** SOLID.
-
----
-
-### 3. Access Control  
+### 2. Access Control  
 **Strict onlyOwner Protection on All Administrative Functions**  
 
 - `mint(address to, uint256 amount)`  
@@ -43,7 +34,7 @@ All are guarded by OpenZeppelin’s `onlyOwner` modifier (inherited from `Ownabl
 
 ---
 
-### 4. Slither Report  
+### 3. Slither Report  
 **Ran on April 14, 2026 using the latest Slither (v0.10.x)**  
 
 ```bash
