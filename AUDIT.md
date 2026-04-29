@@ -15,9 +15,9 @@ I wrote every line with the mindset: “If it can be broken, it will be broke. L
 ---
 
 ### 1. Compiler Version  
-**Locked at Solidity 0.8.24**  
+**Locked at Solidity 0.8.20**  
 
-I used the compiler to `0.8.24` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
+I used the compiler to `0.8.20` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
 
 **The Reason =** One compiler bug can turn a secure contract into a rug. (I don’t gamble)
 
