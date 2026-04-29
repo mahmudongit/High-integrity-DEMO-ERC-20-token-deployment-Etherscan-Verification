@@ -15,7 +15,7 @@
 ---
 
 ## Tech Stack
-- **Language:** Solidity ^0.8.24
+- **Language:** Solidity ^0.8.20 (Compatible)
 - **Framework:** Brownie (Python-based, deterministic deployments)
 - **Testing:** Pytest + Brownie test suite
 - **Libraries:** OpenZeppelin Contracts (v4.9+) — audited, battle-hardened standards
