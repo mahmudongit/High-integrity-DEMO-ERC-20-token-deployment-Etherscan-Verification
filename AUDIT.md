@@ -1,34 +1,30 @@
-**High-Integrity ERC-20 Token Smart Contract Audit Report**
+**My First ERC-20 Token Smart Contract Audit Report**
 
 **Auditor:** Mahmud (Ethereum Smart Contract Engineer & Auditor)  
-**Specialization:** Battle-tested Solidity contracts on Ethereum only • Brownie Framework • Zero-tolerance for exploits  
-**Contract:** ERC-20 Token (deployed & Etherscan-verified)  
+**Specialization:** Verified Solidity contract on Ethereum • Brownie Framework • Checked for Vulnerabilities
+**Contract:** ERC-20 Token (Deployed & Etherscan-verified)  
 **Audit Date:** April 14, 2026  
-**Status:** ✅ **PASSED** — Production-ready, attack-resistant, enterprise-grade integrity  
+**Status:** ✅ **PASSED**
 
 ---
 
 ### Executive Summary  
-As the developer who architected and deployed this ERC-20 token from the ground up using Brownie, I personally performed a full security audit before releasing it to the wild. This is an uncompromising standard that has earned me a reputation for delivering contracts that survive real-world attacks, black-hat scrutiny, and bug bounties.  
+As the developer who architected and deployed this ERC-20 token from the ground up using Brownie, I personally performed a mini security audit before deploying. 
 
-Every line was written with the mindset: “If it can be broken, it will be broken — so I will make it unbreakable.”  
-
-The contract is **clean, locked, and fortified**. No shortcuts nor Hidden risks
+I wrote every line with the mindset: “If it can be broken, it will be broke. Let's make it unbreakable.” 
 ---
 
 ### 1. Compiler Version  
 **Locked at Solidity 0.8.20**  
 
-I deliberately pinned the compiler to `0.8.20` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
+I used the compiler to `0.8.20` in the Brownie `brownie-config.yaml` and `contracts/` source. This eliminates any risk of compiler volatility or silent behavioral changes that plague projects using `^0.8.0` or floating versions. The exact bytecode produced on my machine matches the verified Etherscan deployment 1:1.  
 
-**Why this matters:** One compiler bug can turn a secure contract into a rug. I don’t take that gamble — ever.
+**The Reason =** One compiler bug can turn a secure contract into a rug. (I don’t gamble)
 
 ---
 
 ### 2. Integer Safety  
 **Solidity 0.8+ Built-in Overflow/Underflow Protection + Manual Math Verification**  
-
-SafeMath was intentionally **not** used because Solidity 0.8+ enforces checked arithmetic by default (reverts on overflow/underflow). However, I still performed line-by-line manual review of every arithmetic operation (`+`, `-`, `*`, `/`, `%`) across `_transfer`, `_mint`, `_burn`, `totalSupply`, `balanceOf`, and any custom logic.  
 
 All edge cases were tested in Brownie (including max `uint256`, zero-value transfers, and supply boundary conditions). No unsafe math paths exist.  
 
