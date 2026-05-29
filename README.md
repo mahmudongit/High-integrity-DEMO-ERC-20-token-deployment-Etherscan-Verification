@@ -8,9 +8,9 @@
 **Contract Address:** [`0x2fab703fA3c7d2c0E965f984F2c816824b82Ee8B`](https://sepolia.etherscan.io/address/0x2fab703fA3c7d2c0E965f984F2c816824b82Ee8B#code)
 
 **Network:** Sepolia Testnet  
-**Verification:** Source code fully verified on Etherscan  
-**Audit Status:** Passed internal adversarial audit + 100% test coverage  
-**Security Posture:** Battle-tested against reentrancy, overflow, access control, and frontrunning vectors.
+**Verification:** Source code verified on Sepolia Etherscan  
+**Audit Status:** Passed internal audit + 100% test coverage  
+**Security Posture:** Tested against reentrancy, overflow, access control, and frontrunning vectors.
 
 ---
 
@@ -18,13 +18,13 @@
 - **Language:** Solidity ^0.8.20 (Compatible)
 - **Framework:** Brownie (Python-based, deterministic deployments)
 - **Testing:** Pytest + Brownie test suite
-- **Libraries:** OpenZeppelin Contracts (v4.9+) — audited, battle-hardened standards
-- **Verification:** Hardhat-style flattening + Etherscan direct verification pipeline
+- **Libraries:** OpenZeppelin Contracts (v4.9+)
+- **Verification:** Etherscan direct verification
 
 ---
 
 ## Testing Coverage
-**100% of core functions tested in a local fork environment before any on-chain deployment.**
+**100% of core functions tested in a local fork environment before on-chain deployment.**
 
 - Unit tests for every ERC-20 function (transfer, approve, transferFrom, mint, burn, etc.)
 - Integration tests simulating real-world attack vectors (reentrancy, infinite approval, zero-address edge cases)
@@ -44,15 +44,9 @@ See the complete deployment pipeline in the `scripts/` folder:
 - `scripts/verify.py` — Automated Etherscan verification with source flattening
 - `scripts/audit_checks.py` — Pre-deployment security checklist
 
-Every step is idempotent, logged, and designed for zero human error + The entire process can be re-run end-to-end with a single command.
-
 ---
 
-**Built by a seasoned Ethereum smart contract engineer who only ships contracts that survive real attacks.**
- 
-This is **High-Integrity ERC-20** — the standard I deliver when the stakes are non-negotiable.
-
-Ready for mainnet. Ready for production. Ready for your users.
+**Built by an Ethereum smart contract developer, who's also learning smart contract security.**
 
 — Mahmud | X: @vanebuilds_
-*Ethereum Security Specialist | Brownie Framework Expert*
+*Ethereum Developer*
